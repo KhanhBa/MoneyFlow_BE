@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MoneyFlow.Repository.Models;
+namespace MoneyFlow.Repositories.Models;
 
 public partial class RecurringTransaction
 {
@@ -28,6 +28,4 @@ public partial class RecurringTransaction
     public int CustomerId { get; set; }
 
     public virtual Customer Customer { get; set; }
-
-    public virtual Wallet CustomerNavigation { get; set; }
 }

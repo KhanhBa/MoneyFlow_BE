@@ -4,15 +4,16 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using MoneyFlow.Repository.Models;
 
-namespace MoneyFlow.Repository;
+namespace MoneyFlow.Repositories.Models;
 
 public partial class MoneyFlowContext : DbContext
 {
-
     public MoneyFlowContext(DbContextOptions<MoneyFlowContext> options)
         : base(options)
+    {
+    }
+    public MoneyFlowContext()
     {
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -44,8 +45,6 @@ public partial class MoneyFlowContext : DbContext
 
     public virtual DbSet<TransationType> TransationTypes { get; set; }
 
-    public virtual DbSet<Wallet> Wallets { get; set; }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ConfigurationSystem>(entity =>
@@ -57,7 +56,6 @@ public partial class MoneyFlowContext : DbContext
         {
             entity.ToTable("Customer");
 
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Address)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -84,11 +82,6 @@ public partial class MoneyFlowContext : DbContext
             entity.Property(e => e.UserName)
                 .IsRequired()
                 .HasMaxLength(50);
-
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Customer)
-                .HasForeignKey<Customer>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Customer_Wallet");
         });
 
         modelBuilder.Entity<Log>(entity =>
@@ -117,11 +110,6 @@ public partial class MoneyFlowContext : DbContext
                 .HasForeignKey(d => d.CustomerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_RecurringTransaction_Customer");
-
-            entity.HasOne(d => d.CustomerNavigation).WithMany(p => p.RecurringTransactions)
-                .HasForeignKey(d => d.CustomerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_RecurringTransaction_Wallet");
         });
 
         modelBuilder.Entity<SavingGoal>(entity =>
@@ -173,11 +161,6 @@ public partial class MoneyFlowContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Transation_Customer");
 
-            entity.HasOne(d => d.CustomerNavigation).WithMany(p => p.Transations)
-                .HasForeignKey(d => d.CustomerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Transation_Wallet");
-
             entity.HasOne(d => d.TransactionType).WithMany(p => p.Transations)
                 .HasForeignKey(d => d.TransactionTypeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -192,11 +175,6 @@ public partial class MoneyFlowContext : DbContext
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(50);
-        });
-
-        modelBuilder.Entity<Wallet>(entity =>
-        {
-            entity.ToTable("Wallet");
         });
 
         OnModelCreatingPartial(modelBuilder);

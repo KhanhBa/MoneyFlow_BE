@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj": {}
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
         "projectName": "MoneyFlow.Repositories",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -99,14 +99,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
         "projectName": "MoneyFlow.Services",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Service\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -128,8 +128,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj"
+              "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj": {
+                "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj"
               }
             }
           }

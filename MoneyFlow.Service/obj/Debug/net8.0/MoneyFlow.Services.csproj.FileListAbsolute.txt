@@ -13,3 +13,19 @@ C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\Mone
 C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\refint\MoneyFlow.Services.dll
 C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.pdb
 C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\ref\MoneyFlow.Services.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Services.deps.json
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Services.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Services.pdb
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Repositories.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Repositories.pdb
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.sourcelink.json
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlo.5D8889F8.Up2Date
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\refint\MoneyFlow.Services.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.pdb
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\ref\MoneyFlow.Services.dll

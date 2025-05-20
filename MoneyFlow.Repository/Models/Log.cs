@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MoneyFlow.Repository.Models;
+namespace MoneyFlow.Repositories.Models;
 
 public partial class Log
 {

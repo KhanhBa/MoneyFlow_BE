@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "MoneyFlow.APIs.Controllers.CustomersController",
+    "Method": "GetAllCustomer",
+    "RelativePath": "api/customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

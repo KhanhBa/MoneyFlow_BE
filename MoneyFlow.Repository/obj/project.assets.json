@@ -4327,11 +4327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
       "projectName": "MoneyFlow.Repositories",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Repository\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

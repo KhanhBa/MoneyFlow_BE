@@ -12,3 +12,18 @@ C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\r
 C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.pdb
 C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.genruntimeconfig.cache
 C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\ref\MoneyFlow.Repositories.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.deps.json
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.runtimeconfig.json
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.pdb
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.sourcelink.json
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\refint\MoneyFlow.Repositories.dll
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.pdb
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.genruntimeconfig.cache
+C:\Users\Admin\OneDrive\Máy tính\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\ref\MoneyFlow.Repositories.dll

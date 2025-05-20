@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MoneyFlow.Repository.Models;
+namespace MoneyFlow.Repositories.Models;
 
 public partial class Customer
 {
@@ -26,8 +26,6 @@ public partial class Customer
     public string PassCode { get; set; }
 
     public bool Status { get; set; }
-
-    public virtual Wallet IdNavigation { get; set; }
 
     public virtual ICollection<RecurringTransaction> RecurringTransactions { get; set; } = new List<RecurringTransaction>();
 

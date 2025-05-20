@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MoneyFlow.Repository.Models;
+namespace MoneyFlow.Repositories.Models;
 
 public partial class Transation
 {
@@ -22,8 +22,6 @@ public partial class Transation
     public int CustomerId { get; set; }
 
     public virtual Customer Customer { get; set; }
-
-    public virtual Wallet CustomerNavigation { get; set; }
 
     public virtual TransationType TransactionType { get; set; }
 }

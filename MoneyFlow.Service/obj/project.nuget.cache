@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wa187nEBx/o=",
+  "dgSpecHash": "I0MkGeG4TtE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
