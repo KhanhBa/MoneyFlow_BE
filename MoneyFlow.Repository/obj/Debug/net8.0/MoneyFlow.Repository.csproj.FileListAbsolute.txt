@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repository.deps.json
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repository.runtimeconfig.json
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repository.dll
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repository.pdb
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.AssemblyInfo.cs
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.dll
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\refint\MoneyFlow.Repository.dll
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.pdb
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repository.genruntimeconfig.cache
+C:\Users\Admin\source\repos\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\ref\MoneyFlow.Repository.dll
