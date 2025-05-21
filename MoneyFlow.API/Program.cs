@@ -1,6 +1,9 @@
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MoneyFlow.Repositories.Base;
 using MoneyFlow.Services.Services;
+using System.Text;
 
 namespace MoneyFlow.API
 {
@@ -11,13 +14,73 @@ namespace MoneyFlow.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
+            // ? Di chuy?n Authentication ra ngoài
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("this_is_a_very_long_secret_key_with_at_least_32_chars!")),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+
+            // ? Swagger
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(option =>
+            {
+                option.SwaggerDoc("v1", new OpenApiInfo { Title = "Money Flow", Version = "v1" });
+                option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please enter a valid token",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    Scheme = "Bearer"
+                });
+                option.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                            }
+                        },
+                        new string[]{}
+                    }
+                });
+            });
+
+            // Register services
             builder.Services.AddScoped<UnitOfWork>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -29,8 +92,11 @@ namespace MoneyFlow.API
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            // ? ??t ?úng th? t? middleware
+            app.UseCors("AllowAll");
 
+            app.UseAuthentication(); // Ph?i ??t tr??c UseAuthorization
+            app.UseAuthorization();
 
             app.MapControllers();
 

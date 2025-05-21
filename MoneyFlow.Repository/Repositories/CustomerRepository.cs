@@ -1,4 +1,5 @@
-﻿using MoneyFlow.Repositories.Base;
+﻿using Microsoft.EntityFrameworkCore;
+using MoneyFlow.Repositories.Base;
 using MoneyFlow.Repositories.Models;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,13 @@ namespace MoneyFlow.Repositories.Repositories
         public CustomerRepository(MoneyFlowContext context)
         {
             _context = context;
+        }
+
+        public async Task<Customer> Login(string email, string password)
+        {
+            var obj = await _context.Customers.Where(x => x.Email == email && x.Password == password)
+                .FirstOrDefaultAsync();
+            return obj;
         }
     }
 }

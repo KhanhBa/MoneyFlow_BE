@@ -8,5 +8,31 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoneyFlow.APIs.Controllers.CustomersController",
+    "Method": "Login",
+    "RelativePath": "api/customers/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MoneyFlow.Services.Model.Customer.LoginForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoneyFlow.APIs.Controllers.CustomersController",
+    "Method": "GetCustomerByToken",
+    "RelativePath": "api/customers/tokens",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
