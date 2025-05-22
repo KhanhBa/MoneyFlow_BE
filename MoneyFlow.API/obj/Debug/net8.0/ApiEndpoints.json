@@ -12,7 +12,7 @@
   {
     "ContainingType": "MoneyFlow.APIs.Controllers.CustomersController",
     "Method": "Login",
-    "RelativePath": "api/customers/Login",
+    "RelativePath": "api/customers/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
