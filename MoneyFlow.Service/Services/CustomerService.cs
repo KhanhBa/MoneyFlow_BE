@@ -46,7 +46,7 @@ namespace MoneyFlow.Services.Services
             {
                 if (customer.Status == false) return new BusinessResult(400, "This account is inavailable");
                 var token = CreateJwtToken(customer);
-                return new BusinessResult(200,"Login successful",token);
+                return new BusinessResult(200,"Login successful",new { Token = token });
             }
             return new BusinessResult(400, "Login Fail");
         }
