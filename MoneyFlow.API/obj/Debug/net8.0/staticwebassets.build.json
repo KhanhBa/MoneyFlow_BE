@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "xFUR8eBw3IAQlyjL7CDqrSeV/OQmcdn5uMFpnOuV2Zk=",
+  "Hash": "4RLdWRPytT0UatfmJQR1N+zqit2Mlwm3TJtdhGzcyvY=",
   "Source": "MoneyFlow.APIs",
   "BasePath": "_content/MoneyFlow.APIs",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

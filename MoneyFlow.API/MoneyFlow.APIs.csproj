@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ErrorHanding\ErrorHanding.csproj" />
+    <ProjectReference Include="..\MoneyFlow.Payload\MoneyFlow.Payload.csproj" />
     <ProjectReference Include="..\MoneyFlow.Service\MoneyFlow.Services.csproj" />
   </ItemGroup>
 

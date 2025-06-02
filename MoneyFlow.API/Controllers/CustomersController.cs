@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MoneyFlow.Services.Model.Customer;
 using MoneyFlow.Services.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using ErrorHanding;
+using MoneyFlow.Payload.Request;
+using MoneyFlow.Payload.Response;
 
 namespace MoneyFlow.APIs.Controllers
 {
@@ -30,17 +32,18 @@ namespace MoneyFlow.APIs.Controllers
             }
         }
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody]LoginForm request)
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
             try
             {
                 var result = await _customerService.Login(request);
-                return Ok(result);
+                return Ok(new ApiResponse<LoginResponse>(200, "Login successful", result));
             }
-            catch (Exception ex)
+            catch (AppException e)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(new ApiResponse<LoginResponse>(e.Error.Message, e.Error.Code));
             }
+            
         }
         [Authorize]
         [HttpGet("tokens")]

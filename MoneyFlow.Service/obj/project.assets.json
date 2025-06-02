@@ -1087,6 +1087,26 @@
           }
         }
       },
+      "ErrorHanding/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ErrorHanding.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ErrorHanding.dll": {}
+        }
+      },
+      "MoneyFlow.Payload/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MoneyFlow.Payload.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MoneyFlow.Payload.dll": {}
+        }
+      },
       "MoneyFlow.Repositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3033,6 +3053,16 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "ErrorHanding/1.0.0": {
+      "type": "project",
+      "path": "../ErrorHanding/ErrorHanding.csproj",
+      "msbuildProject": "../ErrorHanding/ErrorHanding.csproj"
+    },
+    "MoneyFlow.Payload/1.0.0": {
+      "type": "project",
+      "path": "../MoneyFlow.Payload/MoneyFlow.Payload.csproj",
+      "msbuildProject": "../MoneyFlow.Payload/MoneyFlow.Payload.csproj"
+    },
     "MoneyFlow.Repositories/1.0.0": {
       "type": "project",
       "path": "../MoneyFlow.Repository/MoneyFlow.Repositories.csproj",
@@ -3041,27 +3071,29 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "ErrorHanding >= 1.0.0",
+      "MoneyFlow.Payload >= 1.0.0",
       "MoneyFlow.Repositories >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\ryy15\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
+      "projectUniqueName": "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
       "projectName": "MoneyFlow.Services",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Service\\obj\\",
+      "projectPath": "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\MoneyFlow.Service\\MoneyFlow.Services.csproj",
+      "packagesPath": "C:\\Users\\ryy15\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\MoneyFlow.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ryy15\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3077,8 +3109,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj": {
-              "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj"
+            "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\ErrorHanding\\ErrorHanding.csproj": {
+              "projectPath": "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\ErrorHanding\\ErrorHanding.csproj"
+            },
+            "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\MoneyFlow.Payload\\MoneyFlow.Payload.csproj": {
+              "projectPath": "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\MoneyFlow.Payload\\MoneyFlow.Payload.csproj"
+            },
+            "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj": {
+              "projectPath": "C:\\Users\\ryy15\\OneDrive\\Desktop\\MoneyFlow project\\MoneyFlow_BE\\MoneyFlow.Repository\\MoneyFlow.Repositories.csproj"
             }
           }
         }
@@ -3092,7 +3130,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -3113,7 +3152,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -2,21 +2,20 @@
 using MoneyFlow.Repositories.Base;
 using MoneyFlow.Repositories.Models;
 using MoneyFlow.Services.Base;
-using MoneyFlow.Services.Model.Customer;
-using System;
-using System.Collections.Generic;
+
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
+using ErrorHanding;
+using MoneyFlow.Payload.Request;
+using MoneyFlow.Payload.Response;
 
 namespace MoneyFlow.Services.Services
 {
     public interface ICustomerService
     {
         Task<IBusinessResult> GetAllCustomer();
-        Task<IBusinessResult> Login(LoginForm request);
+        Task<LoginResponse> Login(LoginRequest request);
         Task<IBusinessResult> GetCustomerById(int Id);
     }
     public class CustomerService:ICustomerService
@@ -39,16 +38,21 @@ namespace MoneyFlow.Services.Services
             return new BusinessResult(200, "Get infomation of Customer", customer);
         }
 
-        public async Task<IBusinessResult> Login(LoginForm request)
+        public async Task<LoginResponse> Login(LoginRequest request)
         {
             var customer = await _unitOfWork.CustomerRepository.Login(request.Email,request.Password);
+             
+            
             if (customer != null)
             {
-                if (customer.Status == false) return new BusinessResult(400, "This account is inavailable");
+                if (customer.Status == false) throw new AppException(ErrorCode.LoginFail);
                 var token = CreateJwtToken(customer);
-                return new BusinessResult(200,"Login successful",new { Token = token });
+                return new LoginResponse()
+                {
+                    Token = token
+                };
             }
-            return new BusinessResult(400, "Login Fail");
+            throw new AppException(ErrorCode.LoginFail);
         }
         
         private string CreateJwtToken(Customer user)

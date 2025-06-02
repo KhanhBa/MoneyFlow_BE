@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyFlow.Services", "Money
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyFlow.Repositories", "MoneyFlow.Repository\MoneyFlow.Repositories.csproj", "{0B943F48-D6B0-4927-83BE-56310BF6799E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyFlow.Payload", "MoneyFlow.Payload\MoneyFlow.Payload.csproj", "{21314DFC-14E7-4FAB-AF8F-4643D2B1806D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHanding", "ErrorHanding\ErrorHanding.csproj", "{0F2CE66A-C19D-4FF4-A868-C3781B0636FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0B943F48-D6B0-4927-83BE-56310BF6799E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B943F48-D6B0-4927-83BE-56310BF6799E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B943F48-D6B0-4927-83BE-56310BF6799E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21314DFC-14E7-4FAB-AF8F-4643D2B1806D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21314DFC-14E7-4FAB-AF8F-4643D2B1806D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21314DFC-14E7-4FAB-AF8F-4643D2B1806D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21314DFC-14E7-4FAB-AF8F-4643D2B1806D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2CE66A-C19D-4FF4-A868-C3781B0636FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2CE66A-C19D-4FF4-A868-C3781B0636FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2CE66A-C19D-4FF4-A868-C3781B0636FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2CE66A-C19D-4FF4-A868-C3781B0636FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ErrorHanding\ErrorHanding.csproj" />
+    <ProjectReference Include="..\MoneyFlow.Payload\MoneyFlow.Payload.csproj" />
     <ProjectReference Include="..\MoneyFlow.Repository\MoneyFlow.Repositories.csproj" />
   </ItemGroup>
 
