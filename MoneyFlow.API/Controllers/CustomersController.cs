@@ -15,10 +15,12 @@ namespace MoneyFlow.APIs.Controllers
     public class CustomersController : ControllerBase
     {
         private ICustomerService _customerService;
+
         public CustomersController(ICustomerService customerService)
         {
             _customerService = customerService;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAllCustomer()
         {
@@ -31,6 +33,7 @@ namespace MoneyFlow.APIs.Controllers
             return BadRequest(ex.Message);
             }
         }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
@@ -45,6 +48,7 @@ namespace MoneyFlow.APIs.Controllers
             }
             
         }
+
         [Authorize]
         [HttpGet("tokens")]
         public async Task<IActionResult> GetCustomerByToken()

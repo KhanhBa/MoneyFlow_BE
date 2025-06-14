@@ -577,7 +577,7 @@
       "ErrorHanding/1.0.0": {
         "runtime": {
           "ErrorHanding.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -585,7 +585,7 @@
       "MoneyFlow.Payload/1.0.0": {
         "runtime": {
           "MoneyFlow.Payload.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -599,7 +599,7 @@
         },
         "runtime": {
           "MoneyFlow.Repositories.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -612,7 +612,7 @@
         },
         "runtime": {
           "MoneyFlow.Services.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

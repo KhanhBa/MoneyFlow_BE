@@ -42,3 +42,18 @@ C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Reposit
 C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.pdb
 C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.genruntimeconfig.cache
 C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\ref\MoneyFlow.Repositories.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.deps.json
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.runtimeconfig.json
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\bin\Debug\net8.0\MoneyFlow.Repositories.pdb
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.csproj.AssemblyReference.cache
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.AssemblyInfoInputs.cache
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.AssemblyInfo.cs
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.csproj.CoreCompileInputs.cache
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.sourcelink.json
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\refint\MoneyFlow.Repositories.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.pdb
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\MoneyFlow.Repositories.genruntimeconfig.cache
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Repository\obj\Debug\net8.0\ref\MoneyFlow.Repositories.dll

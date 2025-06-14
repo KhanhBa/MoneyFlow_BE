@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MoneyFlow.Repositories.Base;
+using MoneyFlow.Repositories.Models;
+using MoneyFlow.Repositories.Repositories;
 using MoneyFlow.Services.Services;
 using System.Text;
 
@@ -78,6 +81,12 @@ namespace MoneyFlow.API
             });
 
             // Register services
+            builder.Services.AddDbContext<MoneyFlowContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            builder.Services.AddScoped<CustomerRepository>();
             builder.Services.AddScoped<UnitOfWork>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
 

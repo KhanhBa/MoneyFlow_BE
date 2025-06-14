@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "MoneyFlow.Services.Model.Customer.LoginForm",
+        "Type": "MoneyFlow.Payload.Request.LoginRequest",
         "IsRequired": true
       }
     ],

@@ -49,3 +49,23 @@ C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Service
 C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\refint\MoneyFlow.Services.dll
 C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.pdb
 C:\Users\ryy15\OneDrive\Desktop\MoneyFlow project\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\ref\MoneyFlow.Services.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Services.deps.json
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Services.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Services.pdb
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\ErrorHanding.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Payload.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Repositories.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\ErrorHanding.pdb
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Payload.pdb
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\bin\Debug\net8.0\MoneyFlow.Repositories.pdb
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.csproj.AssemblyReference.cache
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.AssemblyInfoInputs.cache
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.AssemblyInfo.cs
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.csproj.CoreCompileInputs.cache
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.sourcelink.json
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlo.5D8889F8.Up2Date
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\refint\MoneyFlow.Services.dll
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\MoneyFlow.Services.pdb
+D:\MyProject\MoneyFlow\MoneyFlow_BE\MoneyFlow.Service\obj\Debug\net8.0\ref\MoneyFlow.Services.dll

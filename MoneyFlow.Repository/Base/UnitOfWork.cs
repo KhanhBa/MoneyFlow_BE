@@ -1,30 +1,28 @@
-﻿using MoneyFlow.Repositories.Repositories;
-using MoneyFlow.Repositories.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MoneyFlow.Repositories.Models;
+using MoneyFlow.Repositories.Repositories;
 
 namespace MoneyFlow.Repositories.Base
 {
     public class UnitOfWork
     {
         private readonly MoneyFlowContext _context;
-        private readonly CustomerRepository _customerRepository;
 
-        public UnitOfWork()
+        public CustomerRepository CustomerRepository { get; }
+
+        public UnitOfWork(MoneyFlowContext context, CustomerRepository customerRepository)
         {
-            _context = new MoneyFlowContext();
-            _customerRepository ??= new CustomerRepository();
+            _context = context;
+            CustomerRepository = customerRepository;
         }
 
-        public UnitOfWork(CustomerRepository customerRepository)
+        public async Task SaveAsync()
         {
-            _context = new MoneyFlowContext();
-            _customerRepository = customerRepository;
+            await _context.SaveChangesAsync();
         }
 
-        public CustomerRepository CustomerRepository { get { return _customerRepository; } }
+        public void Save()
+        {
+            _context.SaveChanges();
+        }
     }
 }
