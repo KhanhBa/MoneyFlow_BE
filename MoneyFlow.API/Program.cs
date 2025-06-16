@@ -7,6 +7,7 @@ using MoneyFlow.Repositories.Models;
 using MoneyFlow.Repositories.Repositories;
 using MoneyFlow.Services.Services;
 using System.Text;
+using MoneyFlow.Services.Services.Impl;
 
 namespace MoneyFlow.API
 {
@@ -29,7 +30,7 @@ namespace MoneyFlow.API
                 });
             });
 
-            // ? Di chuy?n Authentication ra ngoài
+            // ? Di chuy?n Authentication ra ngoï¿½i
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -88,6 +89,8 @@ namespace MoneyFlow.API
 
             builder.Services.AddScoped<CustomerRepository>();
             builder.Services.AddScoped<UnitOfWork>();
+            builder.Services.AddScoped<MoneyFlowStoreProcedure>();
+
             builder.Services.AddScoped<ICustomerService, CustomerService>();
 
             var app = builder.Build();
@@ -101,10 +104,10 @@ namespace MoneyFlow.API
 
             app.UseHttpsRedirection();
 
-            // ? ??t ?úng th? t? middleware
+            // ? ??t ?ï¿½ng th? t? middleware
             app.UseCors("AllowAll");
 
-            app.UseAuthentication(); // Ph?i ??t tr??c UseAuthorization
+            app.UseAuthentication(); 
             app.UseAuthorization();
 
             app.MapControllers();
