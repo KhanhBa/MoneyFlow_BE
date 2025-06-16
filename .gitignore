@@ -6,21 +6,21 @@
 *.userosscache
 *.sln.docstates
 
-# Build results
-bin/
-obj/
-[Bb]uild/
-[Bb]ld/
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
+# Build results - match all bin and obj folders in all subdirectories
+**/[Bb]in/
+**/[Oo]bj/
+**/[Dd]ebug/
+**/[Rr]elease/
+**/[Bb]uild/
+**/[Bb]ld/
+**/x64/
+**/x86/
 
-# Rider
-.idea/
-
-# Visual Studio
+# Visual Studio folders
 .vs/
+
+# Rider IDE
+.idea/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
