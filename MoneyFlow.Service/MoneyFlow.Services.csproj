@@ -12,4 +12,8 @@
     <ProjectReference Include="..\MoneyFlow.Repository\MoneyFlow.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.8.41" />
+  </ItemGroup>
+
 </Project>

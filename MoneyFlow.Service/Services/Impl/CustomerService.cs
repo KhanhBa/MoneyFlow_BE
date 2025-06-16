@@ -8,6 +8,7 @@ using MoneyFlow.Repositories.Base;
 using MoneyFlow.Repositories.Models;
 using MoneyFlow.Repositories.Repositories;
 using MoneyFlow.Services.Base;
+using MoneyFlow.Services.Redis;
 
 namespace MoneyFlow.Services.Services.Impl;
 
@@ -15,9 +16,12 @@ public class CustomerService : ICustomerService
     {
         private UnitOfWork _unitOfWork;
         private MoneyFlowStoreProcedure _moneyFlowStoreProcedure;
-        public CustomerService(UnitOfWork unitOfWork, MoneyFlowStoreProcedure moneyFlowStoreProcedure) {
+        private readonly RedisService _redisService;
+
+        public CustomerService(UnitOfWork unitOfWork, MoneyFlowStoreProcedure moneyFlowStoreProcedure, RedisService redisService) {
             _unitOfWork = unitOfWork;
             _moneyFlowStoreProcedure = moneyFlowStoreProcedure;
+            _redisService = redisService;
         }
         public async Task<IBusinessResult> GetAllCustomer()
         {
@@ -43,6 +47,8 @@ public class CustomerService : ICustomerService
             {
                 if (customer.Status == false) throw new AppException(ErrorCode.LoginFail);
                 var token = CreateJwtToken(customer);
+                await _redisService.SetStringAsync($"jwt:{customer.Id}", token.AccessToken); // hoặc token.AccessToken
+
                 return token;
             }
             throw new AppException(ErrorCode.LoginFail);

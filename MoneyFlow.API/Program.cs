@@ -7,7 +7,10 @@ using MoneyFlow.Repositories.Models;
 using MoneyFlow.Repositories.Repositories;
 using MoneyFlow.Services.Services;
 using System.Text;
+using MoneyFlow.Services.Redis;
 using MoneyFlow.Services.Services.Impl;
+using StackExchange.Redis;
+
 
 namespace MoneyFlow.API
 {
@@ -50,7 +53,12 @@ namespace MoneyFlow.API
                     ClockSkew = TimeSpan.Zero
                 };
             });
+            // Khai báo kết nối Redis
+            builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+                ConnectionMultiplexer.Connect("160.191.175.172:6379,password=nam123"));
 
+            // Đăng ký RedisService tùy chỉnh
+            builder.Services.AddSingleton<RedisService>();
             // ? Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(option =>
