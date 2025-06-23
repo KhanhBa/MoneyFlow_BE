@@ -15,7 +15,11 @@
    "T4TemplatePath": null,
    "Tables": [
       {
-         "Name": "[dbo].[ConfigurationSystem]",
+         "Name": "[dbo].[Budget]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Currency]",
          "ObjectType": 0
       },
       {
@@ -23,7 +27,15 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Log]",
+         "Name": "[dbo].[CustomerTransactionCategories]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Icon]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Notification]",
          "ObjectType": 0
       },
       {
@@ -39,11 +51,19 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Transation]",
+         "Name": "[dbo].[Transaction]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TransationType]",
+         "Name": "[dbo].[TransactionCategories]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TransactionType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Wallet]",
          "ObjectType": 0
       }
    ],

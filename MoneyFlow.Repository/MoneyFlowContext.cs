@@ -29,11 +29,17 @@ public partial class MoneyFlowContext : DbContext
             optionsBuilder.UseSqlServer(connectionString);
         }
     }
-    public virtual DbSet<ConfigurationSystem> ConfigurationSystems { get; set; }
+    public virtual DbSet<Budget> Budgets { get; set; }
+
+    public virtual DbSet<Currency> Currencies { get; set; }
 
     public virtual DbSet<Customer> Customers { get; set; }
 
-    public virtual DbSet<Log> Logs { get; set; }
+    public virtual DbSet<CustomerTransactionCategory> CustomerTransactionCategories { get; set; }
+
+    public virtual DbSet<Icon> Icons { get; set; }
+
+    public virtual DbSet<Notification> Notifications { get; set; }
 
     public virtual DbSet<RecurringTransaction> RecurringTransactions { get; set; }
 
@@ -41,21 +47,66 @@ public partial class MoneyFlowContext : DbContext
 
     public virtual DbSet<SavingTransaction> SavingTransactions { get; set; }
 
-    public virtual DbSet<Transation> Transations { get; set; }
+    public virtual DbSet<Transaction> Transactions { get; set; }
 
-    public virtual DbSet<TransationType> TransationTypes { get; set; }
+    public virtual DbSet<TransactionCategory> TransactionCategories { get; set; }
+
+    public virtual DbSet<TransactionType> TransactionTypes { get; set; }
+
+    public virtual DbSet<Wallet> Wallets { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<ConfigurationSystem>(entity =>
+        modelBuilder.Entity<Budget>(entity =>
         {
-            entity.ToTable("ConfigurationSystem");
+            entity.ToTable("Budget");
+
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.CustomerId)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.EndDate).HasColumnType("datetime");
+            entity.Property(e => e.StartDate).HasColumnType("datetime");
+            entity.Property(e => e.Status)
+                .IsRequired()
+                .HasDefaultValueSql("((1))");
+            entity.Property(e => e.TransactionCategoryId)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.Budgets)
+                .HasForeignKey(d => d.CustomerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Budget_Customer");
+
+            entity.HasOne(d => d.TransactionCategory).WithMany(p => p.Budgets)
+                .HasForeignKey(d => d.TransactionCategoryId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Budget_TransactionCategories");
+        });
+
+        modelBuilder.Entity<Currency>(entity =>
+        {
+            entity.ToTable("Currency");
+
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.Code)
+                .IsRequired()
+                .HasMaxLength(10);
+            entity.Property(e => e.ExchangeRate).HasDefaultValueSql("((1))");
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .IsRequired()
+                .HasDefaultValueSql("((1))");
         });
 
         modelBuilder.Entity<Customer>(entity =>
         {
             entity.ToTable("Customer");
 
+            entity.Property(e => e.Id).HasMaxLength(50);
             entity.Property(e => e.Address)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -74,7 +125,7 @@ public partial class MoneyFlowContext : DbContext
                 .IsFixedLength();
             entity.Property(e => e.Password)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(256);
             entity.Property(e => e.Phone)
                 .IsRequired()
                 .HasMaxLength(10)
@@ -84,38 +135,96 @@ public partial class MoneyFlowContext : DbContext
                 .HasMaxLength(50);
         });
 
-        modelBuilder.Entity<Log>(entity =>
+        modelBuilder.Entity<CustomerTransactionCategory>(entity =>
         {
-            entity.ToTable("Log");
+            entity.HasKey(e => new { e.CustomerId, e.TransactionCategoryId });
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Data).IsRequired();
+            entity.HasIndex(e => new { e.CustomerId, e.TransactionCategoryId }, "IX_CustomerTransactionCategories_CustomerId");
+
+            entity.Property(e => e.CustomerId).HasMaxLength(50);
+            entity.Property(e => e.TransactionCategoryId).HasMaxLength(50);
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.CustomerTransactionCategories)
+                .HasForeignKey(d => d.CustomerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_CustomerTransactionCategories_Customer");
+
+            entity.HasOne(d => d.TransactionCategory).WithMany(p => p.CustomerTransactionCategories)
+                .HasForeignKey(d => d.TransactionCategoryId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_CustomerTransactionCategories_TransactionCategories");
+        });
+
+        modelBuilder.Entity<Icon>(entity =>
+        {
+            entity.ToTable("Icon");
+
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.IconUrl).IsRequired();
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<Notification>(entity =>
+        {
+            entity.ToTable("Notification");
+
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.CustomerId)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.Message).IsRequired();
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.Notifications)
+                .HasForeignKey(d => d.CustomerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Notification_Customer");
         });
 
         modelBuilder.Entity<RecurringTransaction>(entity =>
         {
             entity.ToTable("RecurringTransaction");
 
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.CustomerId)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.EndDate).HasColumnType("datetime");
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(50);
             entity.Property(e => e.Note).HasMaxLength(50);
             entity.Property(e => e.StartDate).HasColumnType("datetime");
+            entity.Property(e => e.TransactionCategoryId)
+                .IsRequired()
+                .HasMaxLength(50);
 
             entity.HasOne(d => d.Customer).WithMany(p => p.RecurringTransactions)
                 .HasForeignKey(d => d.CustomerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_RecurringTransaction_Customer");
+
+            entity.HasOne(d => d.TransactionCategory).WithMany(p => p.RecurringTransactions)
+                .HasForeignKey(d => d.TransactionCategoryId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_RecurringTransaction_TransactionCategories");
         });
 
         modelBuilder.Entity<SavingGoal>(entity =>
         {
             entity.ToTable("SavingGoal");
 
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.CustomerId)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.EndDate).HasColumnType("datetime");
             entity.Property(e => e.StartDate).HasColumnType("datetime");
             entity.Property(e => e.Status)
@@ -135,7 +244,11 @@ public partial class MoneyFlowContext : DbContext
         {
             entity.ToTable("SavingTransaction");
 
+            entity.Property(e => e.Id).HasMaxLength(50);
             entity.Property(e => e.Note)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.SavingGoalId)
                 .IsRequired()
                 .HasMaxLength(50);
             entity.Property(e => e.Time).HasColumnType("datetime");
@@ -146,35 +259,126 @@ public partial class MoneyFlowContext : DbContext
                 .HasConstraintName("FK_SavingTransaction_SavingGoal");
         });
 
-        modelBuilder.Entity<Transation>(entity =>
+        modelBuilder.Entity<Transaction>(entity =>
         {
-            entity.ToTable("Transation");
+            entity.ToTable("Transaction");
 
+            entity.Property(e => e.Id).HasMaxLength(50);
             entity.Property(e => e.Code)
                 .IsRequired()
                 .HasMaxLength(50);
+            entity.Property(e => e.CurrencyId)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.CustomerId)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.Time).HasColumnType("datetime");
-            entity.Property(e => e.TransactionTypeId).HasColumnName("TransactionTypeID");
+            entity.Property(e => e.TransactionCategoryId)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.WalletId).HasMaxLength(50);
 
-            entity.HasOne(d => d.Customer).WithMany(p => p.Transations)
+            entity.HasOne(d => d.Currency).WithMany(p => p.Transactions)
+                .HasForeignKey(d => d.CurrencyId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Transaction_Currency");
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.Transactions)
                 .HasForeignKey(d => d.CustomerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Transation_Customer");
+                .HasConstraintName("FK_Transaction_Customer");
 
-            entity.HasOne(d => d.TransactionType).WithMany(p => p.Transations)
-                .HasForeignKey(d => d.TransactionTypeId)
+            entity.HasOne(d => d.TransactionCategory).WithMany(p => p.Transactions)
+                .HasForeignKey(d => d.TransactionCategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Transation_TransationType");
+                .HasConstraintName("FK_Transaction_TransactionCategories");
+
+            entity.HasOne(d => d.Wallet).WithMany(p => p.Transactions)
+                .HasForeignKey(d => d.WalletId)
+                .HasConstraintName("FK_Transaction_Wallet");
         });
 
-        modelBuilder.Entity<TransationType>(entity =>
+        modelBuilder.Entity<TransactionCategory>(entity =>
         {
-            entity.ToTable("TransationType");
+            entity.HasIndex(e => e.CustomerId, "IX_TransactionCategories_CustomerId");
 
-            entity.Property(e => e.Icon).IsRequired();
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.CustomerId).HasMaxLength(50);
+            entity.Property(e => e.IconId)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(50);
+            entity.Property(e => e.TransactionTypeId)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.TransactionCategories)
+                .HasForeignKey(d => d.CustomerId)
+                .HasConstraintName("FK_TransactionCategories_Customer");
+
+            entity.HasOne(d => d.Icon).WithMany(p => p.TransactionCategories)
+                .HasForeignKey(d => d.IconId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TransactionCategories_Icon");
+
+            entity.HasOne(d => d.TransactionType).WithMany(p => p.TransactionCategories)
+                .HasForeignKey(d => d.TransactionTypeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TransactionCategories_TransactionType");
+        });
+
+        modelBuilder.Entity<TransactionType>(entity =>
+        {
+            entity.ToTable("TransactionType");
+
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.CustomerId).HasMaxLength(50);
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.TransactionTypes)
+                .HasForeignKey(d => d.CustomerId)
+                .HasConstraintName("FK_TransactionType_Customer");
+        });
+
+        modelBuilder.Entity<Wallet>(entity =>
+        {
+            entity.ToTable("Wallet");
+
+            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.AccountNumber).HasMaxLength(50);
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.CurrencyId)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.CustomerId)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .IsRequired()
+                .HasDefaultValueSql("((1))");
+            entity.Property(e => e.Type)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            entity.HasOne(d => d.Currency).WithMany(p => p.Wallets)
+                .HasForeignKey(d => d.CurrencyId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Wallet_Currency");
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.Wallets)
+                .HasForeignKey(d => d.CustomerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Wallet_Customer");
         });
 
         OnModelCreatingPartial(modelBuilder);

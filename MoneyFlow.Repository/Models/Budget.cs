@@ -5,25 +5,23 @@ using System.Collections.Generic;
 
 namespace MoneyFlow.Repositories.Models;
 
-public partial class SavingGoal
+public partial class Budget
 {
     public string Id { get; set; }
 
     public string CustomerId { get; set; }
 
-    public string Title { get; set; }
+    public string TransactionCategoryId { get; set; }
 
-    public double TargetAmount { get; set; }
-
-    public double CurrentAmount { get; set; }
+    public double Amount { get; set; }
 
     public DateTime StartDate { get; set; }
 
-    public DateTime? EndDate { get; set; }
+    public DateTime EndDate { get; set; }
 
-    public string Status { get; set; }
+    public bool? Status { get; set; }
 
     public virtual Customer Customer { get; set; }
 
-    public virtual ICollection<SavingTransaction> SavingTransactions { get; set; } = new List<SavingTransaction>();
+    public virtual TransactionCategory TransactionCategory { get; set; }
 }

@@ -5,23 +5,31 @@ using System.Collections.Generic;
 
 namespace MoneyFlow.Repositories.Models;
 
-public partial class Transation
+public partial class Transaction
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
 
     public string Code { get; set; }
 
     public double Money { get; set; }
 
-    public int TransactionTypeId { get; set; }
+    public string TransactionCategoryId { get; set; }
 
     public bool? IsIncome { get; set; }
 
     public DateTime Time { get; set; }
 
-    public int CustomerId { get; set; }
+    public string CustomerId { get; set; }
+
+    public string WalletId { get; set; }
+
+    public string CurrencyId { get; set; }
+
+    public virtual Currency Currency { get; set; }
 
     public virtual Customer Customer { get; set; }
 
-    public virtual TransationType TransactionType { get; set; }
+    public virtual TransactionCategory TransactionCategory { get; set; }
+
+    public virtual Wallet Wallet { get; set; }
 }

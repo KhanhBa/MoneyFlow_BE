@@ -7,7 +7,7 @@ namespace MoneyFlow.Repositories.Models;
 
 public partial class SavingTransaction
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
 
     public double Amount { get; set; }
 
@@ -17,7 +17,7 @@ public partial class SavingTransaction
 
     public string Note { get; set; }
 
-    public int SavingGoalId { get; set; }
+    public string SavingGoalId { get; set; }
 
     public virtual SavingGoal SavingGoal { get; set; }
 }
