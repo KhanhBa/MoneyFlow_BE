@@ -7,7 +7,7 @@ namespace MoneyFlow.Repositories.Models;
 
 public partial class Customer
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
 
     public string UserName { get; set; }
 
@@ -27,9 +27,21 @@ public partial class Customer
 
     public bool Status { get; set; }
 
+    public virtual ICollection<Budget> Budgets { get; set; } = new List<Budget>();
+
+    public virtual ICollection<CustomerTransactionCategory> CustomerTransactionCategories { get; set; } = new List<CustomerTransactionCategory>();
+
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
     public virtual ICollection<RecurringTransaction> RecurringTransactions { get; set; } = new List<RecurringTransaction>();
 
     public virtual ICollection<SavingGoal> SavingGoals { get; set; } = new List<SavingGoal>();
 
-    public virtual ICollection<Transation> Transations { get; set; } = new List<Transation>();
+    public virtual ICollection<TransactionCategory> TransactionCategories { get; set; } = new List<TransactionCategory>();
+
+    public virtual ICollection<TransactionType> TransactionTypes { get; set; } = new List<TransactionType>();
+
+    public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
+
+    public virtual ICollection<Wallet> Wallets { get; set; } = new List<Wallet>();
 }

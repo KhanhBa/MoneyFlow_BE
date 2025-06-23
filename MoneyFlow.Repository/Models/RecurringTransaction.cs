@@ -7,11 +7,11 @@ namespace MoneyFlow.Repositories.Models;
 
 public partial class RecurringTransaction
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
 
     public string Name { get; set; }
 
-    public int TransactionTypeId { get; set; }
+    public string TransactionCategoryId { get; set; }
 
     public double Amount { get; set; }
 
@@ -25,7 +25,9 @@ public partial class RecurringTransaction
 
     public bool Status { get; set; }
 
-    public int CustomerId { get; set; }
+    public string CustomerId { get; set; }
 
     public virtual Customer Customer { get; set; }
+
+    public virtual TransactionCategory TransactionCategory { get; set; }
 }
