@@ -4,10 +4,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6840ad43-4ac6-4951-9b49-d7403bdb0abd</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.8.41" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
@@ -15,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ErrorHanding\ErrorHanding.csproj" />
     <ProjectReference Include="..\MoneyFlow.Payload\MoneyFlow.Payload.csproj" />
+    <ProjectReference Include="..\MoneyFlow.Repository\MoneyFlow.Repositories.csproj" />
     <ProjectReference Include="..\MoneyFlow.Service\MoneyFlow.Services.csproj" />
   </ItemGroup>
 
